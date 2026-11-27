@@ -15,7 +15,8 @@ vcpkg into a MinGit-style `dist/`. `src/` is fetched, never committed.
 
 - Always build with `python scripts/build.py` (add `--arch arm64` for arm64);
   never hand-edit `dist/`. For a from-scratch fetch use `--prepare`.
-- `NIUGIT_VCPKG_ROOT` selects the vcpkg root (default `D:/vcpkg`). The build
+- `NIUGIT_VCPKG_ROOT` selects the vcpkg root (default: the `vcpkg` checkout
+  next to this repo, e.g. `../vcpkg`). The build
   needs two triplets: `<arch>-windows` (curl[schannel]/expat dynamic) and
   `<arch>-windows-static-md` (zlib/iconv static).
 - Local builds are for quick checks only. **CI is the builder of record**:
